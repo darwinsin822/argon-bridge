@@ -15,6 +15,7 @@
     "watch": "tsc -w",
     "test": "vitest run",
     "test:watch": "vitest",
+    "demo": "node scripts/demo.js",
     "start:mcp": "node dist/mcp/server.js",
     "start:host": "node dist/native-host/host.js",
     "doctor": "bash scripts/doctor.sh",
