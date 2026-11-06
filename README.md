@@ -2,6 +2,8 @@
 
 > **Puente modular, local, gratuito y centrado en privacidad entre Google Gemini Web y Google Antigravity mediante MCP y Chrome Native Messaging.**
 
+![Argon Bridge Results Dashboard](assets/argon-results.png)
+
 Argon actúa como el **cerebro estratégico de alto nivel** (diseño, descomposición de tareas, supervisión, memoria) y **Google Antigravity** actúa como el **entorno de ejecución y orquestación multi-agente**.
 
 ---
