@@ -1,0 +1,35 @@
+{
+  "manifest_version": 3,
+  "name": "Argon Bridge — Gemini Web Assistant",
+  "version": "1.0.0",
+  "description": "Puente local y seguro entre Google Gemini Web y Google Antigravity mediante Chrome Native Messaging y MCP.",
+  "permissions": [
+    "nativeMessaging",
+    "storage",
+    "activeTab",
+    "scripting"
+  ],
+  "host_permissions": [
+    "https://gemini.google.com/*"
+  ],
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_title": "Argon Bridge"
+  },
+  "background": {
+    "service_worker": "background/service-worker.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://gemini.google.com/*"],
+      "js": ["content/gemini-bridge.js"],
+      "css": ["content/gemini-bridge.css"],
+      "run_at": "document_idle"
+    }
+  ],
+  "icons": {
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  }
+}

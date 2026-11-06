@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Argon Bridge</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <div class="status-indicator" id="status-dot"></div>
+      <h2>ARGON BRIDGE</h2>
+    </div>
+    <span class="version-badge">v1.0.0</span>
+  </div>
+
+  <div class="connection-card">
+    <div class="row">
+      <span>Estado Native Host:</span>
+      <strong id="connection-status">Comprobando...</strong>
+    </div>
+    <div class="row">
+      <span>Antigravity MCP:</span>
+      <strong id="mcp-status" class="online">Activo</strong>
+    </div>
+  </div>
+
+  <div class="section">
+    <label for="project-select">Proyecto Activo:</label>
+    <select id="project-select">
+      <option value="">Cargando proyectos...</option>
+    </select>
+  </div>
+
+  <div class="section">
+    <label for="task-select">Tarea en Curso (Opcional):</label>
+    <select id="task-select">
+      <option value="">(Ninguna seleccionada)</option>
+    </select>
+  </div>
+
+  <div class="metrics-grid">
+    <div class="metric-box">
+      <span class="metric-value" id="count-total">0</span>
+      <span class="metric-label">Tareas</span>
+    </div>
+    <div class="metric-box">
+      <span class="metric-value green" id="count-completed">0</span>
+      <span class="metric-label">Listas</span>
+    </div>
+    <div class="metric-box">
+      <span class="metric-value blue" id="count-running">0</span>
+      <span class="metric-label">Activas</span>
+    </div>
+    <div class="metric-box">
+      <span class="metric-value red" id="count-blocked">0</span>
+      <span class="metric-label">Alertas</span>
+    </div>
+  </div>
+
+  <div class="actions">
+    <button id="btn-copy-context" class="btn-primary">📋 Copiar Contexto a Portapapeles</button>
+    <button id="btn-refresh" class="btn-secondary">🔄 Actualizar Estado</button>
+  </div>
+
+  <div id="log-message" class="log-message"></div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
